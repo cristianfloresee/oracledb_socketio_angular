@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+
+    <button mat-button>
+        <img class="docs-angular-logo" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="angular">
+        <span>Material</span>
+    </button>
+
+    <span class="example-spacer"></span>
+    
+    <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]" routerLinkActive="active">
+        {{item.label}}
+    </button>
+
+
+    <button mat-button>
+        <mat-icon>menu</mat-icon>Menu
+    </button>
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+</mat-toolbar>
+
+<!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
+<!--<nav class="docs-navbar-header" color="primary">
+    <a mat-button class="docs-button" routerLink="/" aria-label="Angular Material">
+       
+    </a>
+    <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
+    <div class="flex-spacer"></div>
+    <a mat-button class="docs-button docs-navbar-hide-small" href="https://github.com/angular/material2" aria-label="GitHub Repository">
+        <img class="docs-angular-logo" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular"> GitHub
+    </a>
+    <a mat-icon-button class="docs-button docs-navbar-show-small" href="https://github.com/angular/material2" aria-label="GitHub Repository">
+        <img class="docs-angular-logo" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular">
+    </a>
+</nav>
+
+
+<nav class="docs-navbar docs-navbar-show-small">
+    <a mat-button class="docs-navbar-link" routerLink="guides">Guides</a>
+</nav>-->

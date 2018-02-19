@@ -1,0 +1,45 @@
+@mixin nav-bar-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+  
+    app-navbar {
+      color: mat-color($primary, default-contrast);
+  
+      .docs-navbar, .docs-navbar-header {
+        background: mat-color($primary);
+      }
+    }
+  }
+  
+
+/* SEPARACION ENTRE ICONOS*/
+
+.example-icon {
+    padding: 0 14px;
+}
+
+
+/*LOS TIRA PAL FINAL*/
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-button {
+    margin: 0 10px 0 0;
+}
+
+.docs-navbar-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    >.mat-button {
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+}
